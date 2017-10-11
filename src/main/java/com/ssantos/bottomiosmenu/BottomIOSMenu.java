@@ -2,8 +2,11 @@ package com.ssantos.bottomiosmenu;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -92,7 +95,8 @@ public class BottomIOSMenu extends Dialog implements View.OnClickListener {
         bottomButton = findViewById(R.id.bt_bottom);
         bottomButton.setText(buttonText);
         bottomButton.setOnClickListener(this);
-
+        getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         rl.startAnimation(slide);
 
     }
