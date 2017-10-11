@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#CC000000">
+
+    <RelativeLayout
+        android:id="@+id/dialog_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/ly_list_item"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bt_bottom"
+            android:background="@drawable/background_bottomiosmenu">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                style="@style/TextView_Tittle_BottomMenu"
+                android:padding="10dp"/>
+
+            <View
+                android:id="@+id/view_onedp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dedede"/>
+
+            <ListView
+                android:id="@+id/list_item_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dividerHeight="1dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            style="@style/TextView_Item_BottomMenu"
+            android:background="@drawable/background_button_bottomiosmenu"
+            android:layout_marginTop="16dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>
